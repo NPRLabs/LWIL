@@ -15,7 +15,7 @@ def loudnessTest(show, dayo = 0):
 	print dayo
 	print "DAY"
 	curPath = os.getcwd()
-	curPath = '/Users/agoldfarb/Desktop/Loudness'
+	curPath = '/Users/username/Desktop/Loudness'
 	
 	log = open(curPath + '/full.txt', 'w')
 	elog = open(curPath + '/er_log.txt', 'w')
@@ -23,7 +23,7 @@ def loudnessTest(show, dayo = 0):
 	stdout = log
 	stderr = log
 
-	command = 'mount_smbfs //agoldfarb:jam3s.jam3s.@ad.npr.org/news /Users/agoldfarb/news/'
+	command = 'mount_smbfs //username:jam3s.jam3s.@ad.npr.org/news /Users/username/news/'
 	c = subprocess.call(command, stdout=elog, stderr=elog, shell=True)
 
 	command = 'rm '+curPath+'/wav/*.wav'
@@ -58,7 +58,7 @@ def loudnessTest(show, dayo = 0):
 	clearup(curPath)
 	remove(curPath)
 	
-#	command = 'diskutil unmount /Users/agoldfarb/news/'
+#	command = 'diskutil unmount /Users/username/news/'
 	#c = subprocess.call(command, stdout=log, stderr=log, shell=True)
 #	print "unmount"
 	
@@ -95,7 +95,7 @@ def copyanalyze(name,hrs,curPath,yday,start,eo):
 			n = "0"
 			print "n = " + str(n)
 
-		command = 'cp /Users/agoldfarb/news/DC-Production/Media/Recordings/Rollovers/MultiCoder_SOAP_'+m+'_DCTECH-MC01X_'+ yday +'-2017_'+str(n)+str(start+j)+'-00-00.wav '+curPath+'/wav/MultiCoder_SOAP_'+m+'_DCTECH-MC01X_'+ yday +'-2017_'+n+str(start+j)+'-00-00.wav'
+		command = 'cp /Users/username/news/DC-Production/Media/Recordings/Rollovers/MultiCoder_SOAP_'+m+'_DCTECH-MC01X_'+ yday +'-2017_'+str(n)+str(start+j)+'-00-00.wav '+curPath+'/wav/MultiCoder_SOAP_'+m+'_DCTECH-MC01X_'+ yday +'-2017_'+n+str(start+j)+'-00-00.wav'
 		c = subprocess.call(command, stdout=log, stderr=log, shell=True)
 		print command
 		
@@ -297,7 +297,7 @@ def svgcreate(curPath,hrs,name,head,dayo):
 	print errLog
 	elog = open(errLog, 'w')
 
-	command = 'mount_smbfs //agoldfarb:g0ldfarbpw@dc-nprconnect/Divisions/eit/AEHelp/Procedures /Users/agoldfarb/Procedures/'
+	command = 'mount_smbfs //username:g0ldfarbpw@dc-nprconnect/Divisions/eit/AEHelp/Procedures /Users/username/Procedures/'
 	c = subprocess.call(command, stdout=elog, stderr=elog, shell=True)
 
 
@@ -372,11 +372,11 @@ def svgcreate(curPath,hrs,name,head,dayo):
 		#command = 'qlmanage -t -s 1000 -o '+curPath+'/png/ '+fileName
 		#c = subprocess.call(command, stdout=elog, stderr=elog, shell=True)
 
-		command = 'cp '+fileName+' /Users/agoldfarb/Desktop/Loudness/svg/'+sName+'.svg'
+		command = 'cp '+fileName+' /Users/username/Desktop/Loudness/svg/'+sName+'.svg'
 		c = subprocess.call(command, stdout=elog, stderr=elog, shell=True)
 		print command
 		
-		"""command = 'mv svg/*.svg ../../../agoldfarb/Procedures/Loudness/svg/'
+		"""command = 'mv svg/*.svg ../../../username/Procedures/Loudness/svg/'
 		c = subprocess.call(command, stdout=elog, stderr=elog, shell=True)
 		print command
 		"""

@@ -6,7 +6,7 @@
     <string>com.lwil.WESat</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/agoldfarb/Desktop/Loudness/WESat.sh</string>
+        <string>/Users/username/Desktop/Loudness/WESat.sh</string>
     </array>
 <key>StartCalendarInterval</key>
     <array>

@@ -6,7 +6,7 @@
     <string>com.lwil.WESun</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/agoldfarb/Desktop/Loudness/WESun.sh</string>
+        <string>/Users/username/Desktop/Loudness/WESun.sh</string>
     </array>
 <key>StartCalendarInterval</key>
     <array>

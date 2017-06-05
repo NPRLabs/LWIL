@@ -6,7 +6,7 @@
     <string>com.lwil.WATC</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/agoldfarb/Desktop/Loudness/WATC.sh</string>
+        <string>/Users/username/Desktop/Loudness/WATC.sh</string>
     </array>
 <key>StartCalendarInterval</key>
     <array>

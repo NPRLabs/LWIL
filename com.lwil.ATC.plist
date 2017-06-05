@@ -6,7 +6,7 @@
     <string>com.lwil.ATC</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/agoldfarb/Desktop/Loudness/ATC.sh</string>
+        <string>/Users/username/Desktop/Loudness/ATC.sh</string>
     </array>
 <key>StartCalendarInterval</key>
     <array>

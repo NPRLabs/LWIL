@@ -6,7 +6,7 @@
     <string>com.lwil.ME</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/agoldfarb/Desktop/Loudness/ME.sh</string>
+        <string>/Users/username/Desktop/Loudness/ME.sh</string>
     </array>
 <key>StartCalendarInterval</key>
     <array>

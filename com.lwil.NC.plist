@@ -6,7 +6,7 @@
     <string>com.lwil.NC</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/agoldfarb/Desktop/Loudness/NC.sh</string>
+        <string>/Users/username/Desktop/Loudness/NC.sh</string>
     </array>
 <key>StartCalendarInterval</key>
     <dict>

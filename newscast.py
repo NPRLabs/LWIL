@@ -12,7 +12,7 @@ def loudnessTest():
 	from segments import NewscastHrs
 
 	curPath = os.getcwd()
-	curPath = '/Users/agoldfarb/Desktop/Loudness'
+	curPath = '/Users/username/Desktop/Loudness'
 
 	log = open(curPath + '/full.txt', 'w')
 	stdout = log
@@ -23,13 +23,13 @@ def loudnessTest():
 	getVals(elog,log,curPath)
 	clearup(curPath)
 
-	command = 'diskutil unmount /Users/agoldfarb/news/'
+	command = 'diskutil unmount /Users/username/news/'
 	c = subprocess.call(command, stdout=elog, stderr=elog, shell=True)
 
 	createsvg(curPath,NewscastHrs)
 
 def getVals(elog,log,curPath):
-	command = 'mount_smbfs //agoldfarb:jam3s.jam3s.@ad.npr.org/news /Users/agoldfarb/news/'
+	command = 'mount_smbfs //username:jam3s.jam3s.@ad.npr.org/news /Users/username/news/'
 	c = subprocess.call(command, stdout=elog, stderr=elog, shell=True)
 
 	yday = (datetime.date.today() - datetime.timedelta(days=1)).strftime("%m-%d")
@@ -45,13 +45,13 @@ def getVals(elog,log,curPath):
 	for i in range (0,10):
 		print i
 
-		command = 'cp /Users/agoldfarb/news/DC-Production/Media/Recordings/Rollovers/MultiCoder_SOAP_3_DCTECH-MC01X_'+ yday +'-2017_0'+str(i)+'-01-00.wav '+curPath+'/wav/MultiCoder_SOAP_3_DCTECH-MC01X_'+ yday +'-2017_0'+str(i)+'-01-00.wav'
+		command = 'cp /Users/username/news/DC-Production/Media/Recordings/Rollovers/MultiCoder_SOAP_3_DCTECH-MC01X_'+ yday +'-2017_0'+str(i)+'-01-00.wav '+curPath+'/wav/MultiCoder_SOAP_3_DCTECH-MC01X_'+ yday +'-2017_0'+str(i)+'-01-00.wav'
 		c = subprocess.call(command, stdout=log, stderr=log, shell=True)
 
 	for i in range (10,24):
 		print i
 
-		command = 'cp /Users/agoldfarb/news/DC-Production/Media/Recordings/Rollovers/MultiCoder_SOAP_3_DCTECH-MC01X_'+ yday +'-2017_'+str(i)+'-01-00.wav '+curPath+'/wav/MultiCoder_SOAP_3_DCTECH-MC01X_'+ yday +'-2017_'+str(i)+'-01-00.wav'
+		command = 'cp /Users/username/news/DC-Production/Media/Recordings/Rollovers/MultiCoder_SOAP_3_DCTECH-MC01X_'+ yday +'-2017_'+str(i)+'-01-00.wav '+curPath+'/wav/MultiCoder_SOAP_3_DCTECH-MC01X_'+ yday +'-2017_'+str(i)+'-01-00.wav'
 		c = subprocess.call(command, stdout=log, stderr=log, shell=True)
 
 	command = 'chmod 777 '+curPath+'/wav/*.wav'
@@ -238,7 +238,7 @@ def createsvg(curPath,NewscastHrs):
 		command = 'qlmanage -t -s 1000 -o '+curPath+'/ '+fileName
 		c = subprocess.call(command, shell=True)
 		
-		command = 'cp '+fileName+' /Users/agoldfarb/Production/Loudness/svg/'+sName+'.svg'
+		command = 'cp '+fileName+' /Users/username/Production/Loudness/svg/'+sName+'.svg'
 		c = subprocess.call(command, stdout=elog, stderr=elog, shell=True)
 		print command
 
