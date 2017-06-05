@@ -29,7 +29,7 @@ def loudnessTest():
 	createsvg(curPath,NewscastHrs)
 
 def getVals(elog,log,curPath):
-	command = 'mount_smbfs //username:pw.pw.@ad.npr.org/news /Users/username/news/'
+	command = 'mount_smbfs //username:pw@ad.npr.org/news /Users/username/news/'
 	c = subprocess.call(command, stdout=elog, stderr=elog, shell=True)
 
 	yday = (datetime.date.today() - datetime.timedelta(days=1)).strftime("%m-%d")

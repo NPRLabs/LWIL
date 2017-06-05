@@ -23,7 +23,7 @@ def loudnessTest(show, dayo = 0):
 	stdout = log
 	stderr = log
 
-	command = 'mount_smbfs //username:pw.pw.@ad.npr.org/news /Users/username/news/'
+	command = 'mount_smbfs //username:pw@ad.npr.org/news /Users/username/news/'
 	c = subprocess.call(command, stdout=elog, stderr=elog, shell=True)
 
 	command = 'rm '+curPath+'/wav/*.wav'
@@ -297,7 +297,7 @@ def svgcreate(curPath,hrs,name,head,dayo):
 	print errLog
 	elog = open(errLog, 'w')
 
-	command = 'mount_smbfs //username:g0ldfarbpw@dc-nprconnect/Divisions/eit/AEHelp/Procedures /Users/username/Procedures/'
+	command = 'mount_smbfs //username:pw@dc-nprconnect/Divisions/eit/AEHelp/Procedures /Users/username/Procedures/'
 	c = subprocess.call(command, stdout=elog, stderr=elog, shell=True)
 
 
