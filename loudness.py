@@ -23,7 +23,7 @@ def loudnessTest(show, dayo = 0):
 	stdout = log
 	stderr = log
 
-	command = 'mount_smbfs //username:jam3s.jam3s.@ad.npr.org/news /Users/username/news/'
+	command = 'mount_smbfs //username:pw.pw.@ad.npr.org/news /Users/username/news/'
 	c = subprocess.call(command, stdout=elog, stderr=elog, shell=True)
 
 	command = 'rm '+curPath+'/wav/*.wav'
